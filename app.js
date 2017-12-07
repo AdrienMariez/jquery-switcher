@@ -5,10 +5,21 @@ var species = {
 };
 
 function main(){
+
+	$('.button').click(function(){ 					//quand tu clique sur bouton, ça lance la function
+	var animal = $(this).attr('data-animal');		//récupère l'attribut data-animal
+	var image = species[animal]	;					//donne la variation de nom pour les images (si "cat", ça permettra après de faire le img/cat.jpg via STRING)
+	$("#holder").html('<img src=img/'+image+' alt="" />');	//.html permet de changer un contenu html
+});
+
+
+
+
 	/* 
 	tout votre code doit se trouver dans cette fonction,
 	vous pouvez biensur créer d'autres fonctions si nécessaire
 	*/
+	// $(./"[]")
 
 	// 1. placez un listener sur le click des éléments <button>
 	// 2. dans le callback récupérez le data attribute animal
@@ -17,9 +28,7 @@ function main(){
 	// 5. inserez cet élément dans l'élément ayant l'id holder
 	// 
 	// Conseils : avancez étape par étape, console.log et debugger autant que nécessaires !
-	
-	
-	 
+
 }
 
 $(document).ready(function(){
